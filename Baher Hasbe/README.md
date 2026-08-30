@@ -12,6 +12,12 @@ The **Bahire Hasab API** provides real-time calculation of the Ethiopian liturgi
 | `key` | `string` | **Yes** | Your 12-character API Key. |
 
 ### 📦 JSON Response Example
-(እዚህ ጋር ቀደም ብለን ያየነውን የJSON ናሙና ትጨምራለህ)
+const axios = require('axios');
 
-### 📂 [See Implementation Examples](./examples/)
+axios.get('https://api.mulusmy.com/bh/v1/', {
+    params: { year: 2016, key: 'YOUR_API_KEY' }
+})
+.then(res => console.log(res.data))
+.catch(err => console.error(err));
+
+### 📂 [See Implementation Examples](/examples/)
